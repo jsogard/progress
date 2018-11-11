@@ -7,8 +7,8 @@ module.exports = function(query, callback) {
 		ssl: true
 	});
 	client.connect((err, res) => {
-		if(e){
-			console.error(e);
+		if(err){
+			console.error(err);
 			client.end();
 			callback(err, res);
 		}

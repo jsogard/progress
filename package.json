@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-server": "mocha \"server/test/*\"",
-    "test-client": "mocha \"client/test/*\"",
+    "test-server": "mocha --recursive \"server/test/\"",
+    "test-client": "mocha --recursive \"client/test/\"",
     "test": "npm run test-server; npm run test-client",
     "build-watch": "parcel watch ./client/src/index.html",
     "start-watch": "nodemon server/src/app.js",
