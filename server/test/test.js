@@ -1,4 +1,5 @@
 const assert = require('assert');
+const query = require('../src/db/query');
 
 describe('Array', function() {
   describe('#indexOf()', function() {
@@ -7,3 +8,15 @@ describe('Array', function() {
     });
   });
 });
+
+describe('Query', () => {
+	it('should query', (done) => {
+		query({ text: "SELECT NOW()" }, function(err, res) {
+			if(err)
+				console.log(err);
+			else
+				console.log(res);
+			done();
+		});
+	})
+})

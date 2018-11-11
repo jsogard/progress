@@ -11,7 +11,8 @@
     "start-watch": "nodemon server/src/app.js",
     "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
     "build": "parcel build ./client/src/index.html",
-    "start": "npm run build && node server/src/app.js"
+    "start": "npm run build && node server/src/app.js",
+    "sandbox": "parcel build ./sandbox.js && node sandbox.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+    "pg": "^7.6.1",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
   }
